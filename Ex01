@@ -1,0 +1,37 @@
+<?php   
+
+//$matricula = $_GET ["matricula"];
+//$nome = $_GET ["nome"];
+//$funcao = $_GET ["funcao"];
+  
+
+?>
+
+<!DOCTYPE html>
+
+<head>
+
+    <title>Felipe</title>
+
+<meta charset="utf-8">
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<h1>Felipe</h1>
+<h2>
+<?php   
+
+echo "3DAW";
+  
+?>
+</h2>
+</body>   
+
+
+
+
+</html>

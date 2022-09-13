@@ -3,28 +3,34 @@ $ehPost = true;
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $nome = $_POST ["nome"]; 
     $matricula= $_POST["matricula"];
+   echo json_encode($_POST ["nome"]); 
+   echo json_encode($_POST ["matricula"]); 
     if($nome == NULL  || $matricula== NULL)
     {
         echo "Nao foi <br>";
     }
     else if(!file_exists("Dojo.json")) {
-       $arquivo = fopen ("Dojo.json", "w");
-       $cabecalho = "nome;matricula \n";
-
+       $arquivo = fopen ("Dojo.json", "a+");
+        $cabecalho = "{\"Alunos\":[ \n";
        fwrite($arquivo, $cabecalho);
     
        $linha = ($nome.";".$matricula.";\n");
+       $footer = "] \n }";
        fwrite($arquivo, $linha);
-
+        fwrite($arquivo,$footer);    
        fclose($arquivo);
 
     }
     else {
-        $arquivo = fopen ("Dojo.json", "a");
-
-        $linha = json_encode($nome.";".$matricula.";\n");
-        fwrite($arquivo, $linha);
-
+        $arquivo = fopen ("Dojo.json", "a+");
+        $cabecalho = "{\"Alunos\":[ \n";
+        fwrite($arquivo, $cabecalho);
+        $linha = json_encode($nome."\n".$matricula."\n");
+        $footer = "] \n }";
+        
+        fwrite ($arquivo, $linha);
+        fwrite($arquivo,$footer); 
+        
         fclose($arquivo);
     }
 }

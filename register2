@@ -1,0 +1,56 @@
+<?php
+
+$errors = array();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$bancodeDados = "registration";
+
+
+try {
+    $conn = new mysqli($servername,$username,$password,$bancodeDados);
+    
+    echo "Connected successfully";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+
+
+// se o botao de registrar é clicado
+if (isset($_POST['register'])) {
+        
+   // $id = $_POST["id"];
+    $username = $_POST["username"];
+    $email = $_POST ["email"];
+    
+    $password_1 = $_POST ["password1"];
+    $password_2 = $_POST ["password2"];
+    
+    
+
+    
+    // verificando se os campos estão sendo preenchidos adequadamente
+    if (empty($username)) {
+        array_push($errors, "Username is required");
+    }
+    if (empty($email)) {
+        array_push($errors, "Email is required");
+    }
+    if (empty($password_1)) {
+        array_push($errors, "Password is required");
+    }
+    if ($password_1 != $password_2) {
+        array_push($errors, "The two passwords not match");
+    } //na falta de erros salve o usuario na database
+
+    if (count($errors) == 0) {
+        echo ($password_1);
+        $sql = "INSERT INTO users(`username`,`email`,`password`)
+            VALUES($username,$email,$password_1)";
+        $result = $conn->query($sql);
+        echo($result);
+            
+}
+
+    }
+?>

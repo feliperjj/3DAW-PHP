@@ -1,10 +1,10 @@
 <?php
 
-$errors = array();
+
 $servername = "localhost";
-$username = "root";
+$dbuserName = "root";
 $password = "";
-$bancodeDados = "registration";
+$db = "register";
 
 
 
@@ -15,17 +15,13 @@ if (isset($GET['register'])) {
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $username = $GET["username"];
         $email = $GET["email"];
-        $password_1 = $GET["password1"];
-        $password_2 = $GET["password2"];
+        $password_1 = $GET["password_1"];
+        $password_2 = $GET["password_2"];
 
-        $conn = new mysqli($servidor, $usuario, $senha, $bancodeDados);
+        $conn = new mysqli($servername, $dbuserName, $password, $db);
         if (!$conn->connect_error) {
             die("Conexao com o banco de dados falhou!!!");
         }
-
-
-
-
 
         // verificando se os campos estão sendo preenchidos adequadamente
         if (empty($username)) {
@@ -45,7 +41,7 @@ if (isset($GET['register'])) {
             echo ($password_1);
             $sql = "Insert into users(`username`,`email`,`password`)
             VALUES($username,$email,$password_1)";
-            $result = $coon->query($sql);
+            $result = $conn->query($sql);
             echo ($result);
         }
     }

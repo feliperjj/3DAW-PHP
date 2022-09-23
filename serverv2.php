@@ -1,6 +1,6 @@
 <?php
 
-
+$errors=array();
 $servername = "localhost";
 $dbuserName = "root";
 $password = "";
@@ -11,12 +11,12 @@ $db = "register";
 // se o botao de registrar é clicado
 if (isset($GET['register'])) {
 
-    // $id = $GET["id"];
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $username = $GET["username"];
-        $email = $GET["email"];
-        $password_1 = $GET["password_1"];
-        $password_2 = $GET["password_2"];
+    // $id = $_GET["id"];
+    if ($_SERVER["REQUEST_METHOD"] == "_GET") {
+        $username = $_GET["username"];
+        $email = $_GET["email"];
+        $password_1 = $_GET["password_1"];
+        $password_2 = $_GET["password_2"];
 
         $conn = new mysqli($servername, $dbuserName, $password, $db);
         if (!$conn->connect_error) {
@@ -39,8 +39,7 @@ if (isset($GET['register'])) {
 
         if (count($errors) == 0) {
             echo ($password_1);
-            $sql = "Insert into users(`username`,`email`,`password`)
-            VALUES($username,$email,$password_1)";
+            $sql = "INSERT INTO  `users`( `username`, `email`, `password`) VALUES ('$username', '$email','$password_1')";
             $result = $conn->query($sql);
             echo ($result);
         }

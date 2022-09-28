@@ -1,0 +1,29 @@
+<?php   
+
+  $nomes = array("Jose","Rodrigo", "Diego","Leticia","Marcelo");
+  $x;
+  $notas = array(7.5,7.0,7.1,8.0,8.5); 
+  ?>
+  <!Doctype html>
+  <html>
+<head>
+    <title>Felipe</title>
+</head>
+  <body>
+  <table style = border:solid>
+    <tr>
+  <th>Nome</th> <th>Nota</th>
+    </tr>
+  <?php
+
+    
+   for ($x=0; $x <= 4; $x++){
+
+    echo "<tr>
+    <td> $nomes[$x] </td> <td> $notas[$x]</td> </tr>";
+   } 
+    
+ ?>
+ </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?php   
+   
+  $nomes = array("Jose","Rodrigo", "Diego","Leticia","Marcelo");
+  $x = ""; 
+  $notas = array(7.5,7.0,7.1,8.0,8.5); 
+   echo "<table> <td>$nomes[0]</td>";
+   echo "<br>"; 
+   echo "<tr> <td>$nomes[1]</td>";
+   echo "<br>"; 
+   echo "<td> $nomes[2] </td>";
+   echo "<br>";
+   echo "<td> $nomes[3] </td>";
+   echo "<br>";
+   echo "<td> $nomes[4]</td> </table>";
+   echo "<br>";
+   for ($x = 0; $x <= 4; $x++){
+
+    echo $nomes[$x];
+    echo "<br>"; 
+    echo "$notas[$x] <br>";
+   } 
+ ?>

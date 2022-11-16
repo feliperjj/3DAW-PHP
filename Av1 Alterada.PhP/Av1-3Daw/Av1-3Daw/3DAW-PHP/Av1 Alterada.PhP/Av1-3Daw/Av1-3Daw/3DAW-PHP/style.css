@@ -1,0 +1,114 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display:-ms-grid;
+    background-color: rgb(46, 69, 78);
+    font-size: 25px !important;
+}
+
+fieldset{
+    border: none;
+}
+ input{
+    margin-bottom: 7px ;
+    border-radius: 7px;
+    border: none;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    font-size: 17px !important;
+
+ }
+
+::placeholder{
+    font-size: 20px;
+}
+.botao{
+    width: 30%;
+    height: 25px;
+}
+
+.mestre {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items: center;
+    }
+    
+.criar { 
+    grid-area: 2 / 1 / 3 / 4; 
+    background-color: rgb(152, 175, 195);
+    min-width: 75%;
+    min-height: 350px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;
+}
+.alterar { 
+    grid-area: 1 / 2 / 2 / 3; 
+    background-color: rgb(152, 175, 195);
+    min-width: 90%;
+    max-width: 33%;
+    height: 350px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+.apagar { 
+    grid-area: 1 / 3 / 2 / 4; 
+    background-color: rgb(152, 175, 195);
+    min-width: 90%;
+    height: 350px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+.exibir { 
+    grid-area: 2 / 1 / 3 / 4; 
+    background-color: rgb(152, 175, 195);
+    min-width: 75%;
+    min-height: 350px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;
+}
+h1{
+    font-size: 30px;
+    margin-top: 5px;
+}
+table{
+    border: solid black 1px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(182, 191, 200);
+}
+tr{
+    border: solid black 1px;
+}
+td{
+    border: solid black 1px;
+}
+
+.verificador{
+    font-size: 10px;
+    margin-top: 0px;
+    color: red;
+}
+.container-fluid{
+
+justify-content: space-between;
+
+}
+
+.form-group{
+
+background-color: grey;
+
+}

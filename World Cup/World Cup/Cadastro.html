@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inserir seleção</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="menu">
+    <ul>
+        <li><a href="Cadastro.html">Inserir Seleção</a></li>
+        <li><a href="alterarSelecao.html">Alterar Seleção</a></li>
+        <li><a href="IncluirJogo.html">Cadastrar Jogo</a></li>
+        <li><a href="resultJogo.html">Resultado do Jogo</a></li>
+        <li><a href="calendarioTodo.html">Calendário Inteiro</a></li>
+        <li><a href="calendarioSelecao.html">Calendário de uma Seleção</a></li>
+        <li><a href="exibircalendarioGrupo.html">Calendário de um Grupo</a></li>
+
+ 
+    </ul>
+</div>
+    <form id="formIncluir">
+        <fieldset>
+            <legend style="font-size: 20px;">Digite os Dados da Seleção</legend>
+            
+            <label>Nome da seleção:</label>
+            <input type="text" name="nome" id="nome"><br><br>
+            <label>Grupo da Seleção:</label>
+            <input type="text" name="grupo" id="grupo"><br><br>
+            <label>Nome do Técnico:</label>
+            <input type="text" name="tecnico" id="tecnico"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="enviarForm1();">
+        </fieldset>
+    </form>
+    <script src="index.js"></script> 
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Seleção </title>
+    <link rel="stylesheet" href="style.css">
+    
+
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="Cadastro.html">Inserir Seleção</a></li>
+            <li><a href="alterarSelecao.html">Alterar Seleção</a></li>
+            <li><a href="IncluirJogo.html">Cadastrar Jogo</a></li>
+            <li><a href="resultJogo.html">Resultado do Jogo</a></li>
+            <li><a href="calendarioTodo.html">Calendário Inteiro</a></li>
+            <li><a href="calendarioSelecao.html">Calendário de uma Seleção</a></li>
+            <li><a href="exibircalendarioGrupo.html">Calendário de um Grupo</a></li>
+    
+
+
+        </ul>
+    </div>
+    <form id="formBusca">
+        <fieldset>
+            <legend style="font-size: 20px;">Digite a Seleção a ser alterarada</legend>
+            <label>Nome da Seleção:</label>
+            <input type="text" name="nome" id="nome"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="buscarSelecao();">
+        </fieldset>
+    </form>
+
+    <form id="formAlterar" style="display:none">
+        <fieldset style="margin-top: 10px;">
+            <legend style="font-size: 20px;">Digite os dados novos</legend>
+
+            <label>Nome:</label>
+            <input type="text" name="nome" id="nomeAlt" value=""><br><br>
+            <label>Tecnico:</label>
+            <input type="text" name="tecnico" id="tecnicoAlt" value=""><br><br>
+            <label>Grupo:</label>
+            <input type="text" name="grupo" id="grupoAlt" value=""><br><br>
+            <label>Pontos:</label>
+            <input type="text" name="ponto" id="pontoAlt" value=""><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="enviarForm2();">
+        </fieldset>
+    </form>
+    <script src="index.js"></script> 
+</body>
+
+</html>

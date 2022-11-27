@@ -1,0 +1,40 @@
+
+
+legend {
+    background-color: #6babf3;
+    color: white;
+    padding: 5px 10px;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+}
+#index{
+    flex-direction: column;
+    width: 25%;
+    margin: auto;
+    border: solid 1px;
+}
+
+li{
+    margin: 5px;
+    margin-left: 25px;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+   
+    
+  }
+  .menu a {
+  
+    padding: 15px 30px;
+    border-radius: 4px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+  }

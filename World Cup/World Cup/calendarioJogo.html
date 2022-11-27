@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calendário Jogo </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="Cadastro.html">Inserir Seleção</a></li>
+            <li><a href="alterarSelecao.html">Alterar Seleção</a></li>
+            <li><a href="IncluirJogo.html">Cadastrar Jogo</a></li>
+            <li><a href="resultJogo.html">Resultado do Jogo</a></li>
+            <li><a href="calendarioTodo.html">Calendário Inteiro</a></li>
+            <li><a href="calendarioSelecao.html">Calendário de uma Seleção</a></li>
+            <li><a href="exibircalendarioGrupo.html">Calendário de um Grupo</a></li>
+   
+      
+        </ul>
+    </div>
+
+    <form id="form">
+        <fieldset>
+            <legend style="font-size: 20px;">Digite o nome das Seleções que jogaram</legend>
+            <label>Nome da Seleção 1:</label>
+            <input type="text" name="nomeA" id="nomeA"><br><br>
+            <label>Nome da Seleção 2:</label>
+            <input type="text" name="nomeB" id="nomeB"><br><br>
+            <input type="button" name="envio" value="Enviar" onclick="carregaJogo();">
+        </fieldset>
+    </form>
+
+    <table id="tabela" style="border:1px solid; display: none;margin: 10px;">
+        <tr style="border:1px solid">
+            <th style="border:1px solid; padding:0px 25px;">Data</th>
+            <th style="border:1px solid; padding:0px 25px;">Hora</th>
+            <th style="border:1px solid; padding:0px 25px;">Local</th>
+            <th style="border:1px solid; padding:0px 25px;">Equipe A</th>
+            <th style="border:1px solid; padding:0px 25px;">Gols</th>
+            <th style="border:1px solid; padding:0px 25px;">Equipe B</th>
+            <th style="border:1px solid; padding:0px 25px;">Gols</th>
+        </tr>
+    </table>
+    <script src="index.js"></script> 
+</body>
+
+</html>
